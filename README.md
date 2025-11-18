@@ -1,6 +1,12 @@
 # Namma Metro CLI
 
 Lightweight command-line **route estimator** for the Bangalore *Namma Metro* network.
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Requests](https://img.shields.io/badge/Requests-API%20Calls-green)
+![Colorama](https://img.shields.io/badge/Colorama-CLI%20Colors-yellow)
+![GeoJSON](https://img.shields.io/badge/Data-GeoJSON-blueviolet)
+![Dijkstra](https://img.shields.io/badge/Algorithm-Dijkstra-red)
+
 
 > Type origin and destination station names (supports fuzzy matching / typos) and get an estimated route, total distance and arrival time using live GeoJSON station data.
 
