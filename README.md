@@ -18,8 +18,8 @@ Lightweight command-line **route estimator** for the Bangalore *Namma Metro* net
 ## Quick start
 
 ```bash
-# Clone and run (assumes main script is namma_metro_cli.py)
-git clone https://github.com/<your-username>/namma-metro-cli.git
+# Clone and run 
+git clone https://github.com/Yashwanth25M/namma-metro-cli
 cd namma-metro-cli
 python -m venv .venv
 source .venv/bin/activate   # macOS / Linux
@@ -91,14 +91,6 @@ Tweak these constants to change route-time behaviour.
 - `requests` — for fetching GeoJSON.
 - `colorama` — ANSI terminal color output.
 
-Add to `requirements.txt`:
-```
-requests
-colorama
-```
-
----
-
 ## Known limitations & suggestions
 
 - **Line connectivity assumption**: the script connects stations by nearest geographic distance within a line group. This may incorrectly link non-adjacent stations if the line order in the GeoJSON is not sequential. For greater accuracy, prefer connecting using the order provided in the GeoJSON (if available) or by parsing explicit adjacency.
@@ -109,18 +101,3 @@ colorama
 - **No unit tests**: Add tests for `haversine_km`, `build_network`, `build_graph`, and `dijkstra`.
 
 ---
-
-## Improvements you may want
-
-- Parse ordered station sequences from the GeoJSON if available and use those for line adjacency instead of nearest-neighbour heuristics.
-- Add an option to choose optimization objective: `min_time` (default) vs `min_distance`.
-- Add station/line search flags to the CLI for scripting (e.g., `--from "MG Road" --to "Majestic"`).
-- Add caching of the GeoJSON to a local file with a `--refresh` flag.
-- Export route results as JSON for downstream tooling.
-
----
-
-## Files
-
-- `namma_metro_cli.py` — main script / entrypoint (contains all logic in the repo snapshot provided).
-- `requirements.txt` — list runtime dependencies (create if missing).
