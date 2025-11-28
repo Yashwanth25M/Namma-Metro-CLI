@@ -41,7 +41,7 @@ It builds a graph from station metadata, computes fastest routes (Dijkstra), off
 
 ---
 
-## Demo / Example CLI Output
+## Example CLI Output
 
 ```
 ==========================
