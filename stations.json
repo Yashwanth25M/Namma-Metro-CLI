@@ -1,0 +1,553 @@
+[{
+"id": "whitefield-kadugodi",
+"name": "Whitefield (Kadugodi)",
+"lat": 12.99507,
+"lon": 77.75777,
+"lines": ["Purple"]
+},
+{
+"id": "kadugodi-tree-park",
+"name": "Kadugodi Tree Park",
+"lat": 12.98565,
+"lon": 77.74690,
+"lines": ["Purple"]
+},
+{
+"id": "hopefarm-channasandra",
+"name": "Hopefarm Channasandra",
+"lat": 12.98793,
+"lon": 77.75409,
+"lines": ["Purple"]
+},
+{
+"id": "pattandur-agrahara",
+"name": "Pattandur Agrahara",
+"lat": 12.987613,
+"lon": 77.738211,
+"lines": ["Purple"]
+},
+{
+"id": "sri-sathya-sai-hospital",
+"name": "Sri Sathya Sai Hospital",
+"lat": 12.98102,
+"lon": 77.72762,
+"lines": ["Purple"]
+},
+{
+"id": "nallurhalli",
+"name": "Nallurhalli",
+"lat": 12.976528,
+"lon": 77.724763,
+"lines": ["Purple"]
+},
+{
+"id": "kundalahalli",
+"name": "Kundalahalli",
+"lat": 12.977461,
+"lon": 77.715761,
+"lines": ["Purple"]
+},
+{
+"id": "hoodi",
+"name": "Hoodi",
+"lat": 12.98873,
+"lon": 77.71127,
+"lines": ["Purple"]
+},
+{
+"id": "garudacharpalya",
+"name": "Garudacharpalya",
+"lat": 12.99356,
+"lon": 77.70376,
+"lines": ["Purple"]
+},
+{
+"id": "singayyanapalya",
+"name": "Singayyanapalya",
+"lat": 12.99678,
+"lon": 77.69217,
+"lines": ["Purple"]
+},
+{
+"id": "krishnarajapura",
+"name": "Krishnarajapura",
+"lat": 12.99999,
+"lon": 77.67794,
+"lines": ["Purple"]
+},
+{
+"id": "benniganahalli",
+"name": "Benniganahalli",
+"lat": 12.99655,
+"lon": 77.66828,
+"lines": ["Purple"]
+},
+{
+"id": "baiyappanahalli",
+"name": "Baiyappanahalli",
+"lat": 12.990763,
+"lon": 77.652468,
+"lines": ["Purple"]
+},
+{
+"id": "swami-vivekananda-road",
+"name": "Swami Vivekananda Road",
+"lat": 12.985958,
+"lon": 77.644940,
+"lines": ["Purple"]
+},
+{
+"id": "indiranagar",
+"name": "Indiranagar",
+"lat": 12.971877,
+"lon": 77.641388,
+"lines": ["Purple"]
+},
+{
+"id": "halasuru",
+"name": "Halasuru",
+"lat": 12.967052,
+"lon": 77.633960,
+"lines": ["Purple"]
+},
+{
+"id": "trinity",
+"name": "Trinity",
+"lat": 12.961184,
+"lon": 77.620324,
+"lines": ["Purple"]
+},
+{
+"id": "mahatma-gandhi-road",
+"name": "Mahatma Gandhi Road",
+"lat": 12.972065,
+"lon": 77.623804,
+"lines": ["Purple"]
+},
+{
+"id": "cubbon-park",
+"name": "Cubbon Park",
+"lat": 12.981095,
+"lon": 77.596860,
+"lines": ["Purple"]
+},
+{
+"id": "vidhana-soudha",
+"name": "Dr. B. R. Ambedkar Station, Vidhana Soudha",
+"lat": 12.971382,
+"lon": 77.596957,
+"lines": ["Purple"]
+},
+{
+"id": "central-college",
+"name": "Sir M. Visveshwaraya Stn., Central College",
+"lat": 12.971900,
+"lon": 77.591203,
+"lines": ["Purple"]
+},
+{
+"id": "majestic",
+"name": "Nadaprabhu Kempegowda Stn., Majestic",
+"lat": 12.971875,
+"lon": 77.592327,
+"lines": ["Purple","Green"]
+},
+{
+"id": "sangolli-rayanna-railway",
+"name": "Krantivira Sangolli Rayanna Railway Station",
+"lat": 12.970410,
+"lon": 77.588194,
+"lines": ["Purple"]
+},
+{
+"id": "magadi-road",
+"name": "Magadi Road",
+"lat": 12.975578,
+"lon": 77.555430,
+"lines": ["Purple"]
+},
+{
+"id": "hosahalli",
+"name": "Sri Balagangadharanatha Swamiji Stn., Hosahalli",
+"lat": 12.974178,
+"lon": 77.545538,
+"lines": ["Purple"]
+},
+{
+"id": "vijayanagar",
+"name": "Vijayanagar",
+"lat": 12.970801,
+"lon": 77.537285,
+"lines": ["Purple"]
+},
+{
+"id": "attiguppe",
+"name": "Attiguppe",
+"lat": 12.961957,
+"lon": 77.533582,
+"lines": ["Purple"]
+},
+{
+"id": "deepanjali-nagar",
+"name": "Deepanjali Nagar",
+"lat": 12.952187,
+"lon": 77.536939,
+"lines": ["Purple"]
+},
+{
+"id": "mysuru-road",
+"name": "Mysuru Road",
+"lat": 12.946507,
+"lon": 77.529780,
+"lines": ["Purple"]
+},
+{
+"id": "pantharapalya-nayandahalli",
+"name": "Pantharapalya \u2013 Nayandahalli",
+"lat": 12.946818,
+"lon": 77.531320,
+"lines": ["Purple"]
+},
+{
+"id": "rajarajeshwari-nagar",
+"name": "Rajarajeshwari Nagar",
+"lat": 12.9367,
+"lon": 77.5196,
+"lines": ["Purple"]
+},
+{
+"id": "jnanabharathi",
+"name": "Jnanabharathi",
+"lat": 12.929228,
+"lon": 77.511388,
+"lines": ["Purple"]
+},
+{
+"id": "pattanagere",
+"name": "Pattanagere",
+"lat": 12.919163,
+"lon": 77.507515,
+"lines": ["Purple"]
+},
+{
+"id": "kengeri-bus-terminal",
+"name": "Kengeri Bus Terminal",
+"lat": 12.924140,
+"lon": 77.497715,
+"lines": ["Purple"]
+},
+{
+"id": "kengeri",
+"name": "Kengeri",
+"lat": 12.922710,
+"lon": 77.489773,
+"lines": ["Purple"]
+},
+{
+"id": "challaghatta",
+"name": "Challaghatta",
+"lat": 12.897420,
+"lon": 77.461240,
+"lines": ["Purple"]
+},
+{
+"id": "rashtreeya-vidyalaya-road",
+"name": "Rashtreeya Vidyalaya Road",
+"lat": 12.921458,
+"lon": 77.580375,
+"lines": ["Green","Yellow"]
+},
+{
+"id": "banashankari",
+"name": "Banashankari",
+"lat": 12.91394,
+"lon": 77.57649,
+"lines": ["Green"]
+},
+{
+"id": "jaya-prakash-nagar",
+"name": "Jaya Prakash Nagar",
+"lat": 12.907299,
+"lon": 77.573133,
+"lines": ["Green"]
+},
+{
+"id": "yelachenahalli",
+"name": "Yelachenahalli",
+"lat": 12.898913,
+"lon": 77.570026,
+"lines": ["Green"]
+},
+{
+"id": "konankunte-cross",
+"name": "Konankunte Cross",
+"lat": 12.887500,
+"lon": 77.558700,
+"lines": ["Green"]
+},
+{
+"id": "doddakallasandra",
+"name": "Doddakallasandra",
+"lat": 12.875540,
+"lon": 77.545230,
+"lines": ["Green"]
+},
+{
+"id": "vajarahalli",
+"name": "Vajarahalli",
+"lat": 12.864078,
+"lon": 77.551270,
+"lines": ["Green"]
+},
+{
+"id": "thalaghattapura",
+"name": "Thalaghattapura",
+"lat": 12.853160,
+"lon": 77.542030,
+"lines": ["Green"]
+},
+{
+"id": "silk-institute",
+"name": "Silk Institute",
+"lat": 12.837773,
+"lon": 77.572363,
+"lines": ["Green"]
+},
+{
+"id": "mantri-square-sampige-road",
+"name": "Mantri Square Sampige Road",
+"lat": 12.992550,
+"lon": 77.584070,
+"lines": ["Green"]
+},
+{
+"id": "srirampura",
+"name": "Srirampura",
+"lat": 12.994260,
+"lon": 77.584570,
+"lines": ["Green"]
+},
+{
+"id": "mahalakshmi",
+"name": "Mahalakshmi",
+"lat": 13.004140,
+"lon": 77.565389,
+"lines": ["Green"]
+},
+{
+"id": "sandal-soap-factory",
+"name": "Sandal Soap Factory",
+"lat": 13.023118,
+"lon": 77.560255,
+"lines": ["Green"]
+},
+{
+"id": "rajajinagar",
+"name": "Rajajinagar",
+"lat": 13.002460,
+"lon": 77.570800,
+"lines": ["Green"]
+},
+{
+"id": "mahakavi-kuvempu-road",
+"name": "Mahakavi Kuvempu Road",
+"lat": 12.999840,
+"lon": 77.579850,
+"lines": ["Green"]
+},
+{
+"id": "manjunath-nagar",
+"name": "Manjunath Nagar",
+"lat": 13.050137,
+"lon": 77.494413,
+"lines": ["Green"]
+},
+{
+"id": "nagasandra",
+"name": "Nagasandra",
+"lat": 13.048041,
+"lon": 77.500091,
+"lines": ["Green"]
+},
+{
+"id": "dasarahalli",
+"name": "Dasarahalli",
+"lat": 13.043567,
+"lon": 77.512464,
+"lines": ["Green"]
+},
+{
+"id": "jalahalli",
+"name": "Jalahalli",
+"lat": 12.999078,
+"lon": 77.529191,
+"lines": ["Green"]
+},
+{
+"id": "peenya-industry",
+"name": "Peenya Industry",
+"lat": 13.010080,
+"lon": 77.526060,
+"lines": ["Green"]
+},
+{
+"id": "peenya",
+"name": "Peenya",
+"lat": 13.032921,
+"lon": 77.533297,
+"lines": ["Green"]
+},
+{
+"id": "goraguntepalya",
+"name": "Goraguntepalya",
+"lat": 13.028370,
+"lon": 77.540753,
+"lines": ["Green"]
+},
+{
+"id": "yeshwanthpur",
+"name": "Yeshwanthpur",
+"lat": 13.019200,
+"lon": 77.562800,
+"lines": ["Green"]
+},
+{
+"id": "south-end-circle",
+"name": "South End Circle",
+"lat": 12.938237,
+"lon": 77.580076,
+"lines": ["Green"]
+},
+{
+"id": "lalbagh",
+"name": "Lalbagh",
+"lat": 12.946355,
+"lon": 77.580050,
+"lines": ["Green"]
+},
+{
+"id": "national-college",
+"name": "National College",
+"lat": 12.950961,
+"lon": 77.566600,
+"lines": ["Green"]
+},
+{
+"id": "chickpete",
+"name": "Chickpete",
+"lat": 12.966759,
+"lon": 77.574782,
+"lines": ["Green","Purple"]
+},
+{
+"id": "krishna-rajendra-market",
+"name": "Krishna Rajendra Market",
+"lat": 12.961037,
+"lon": 77.568390,
+"lines": ["Green"]
+},
+{
+"id": "ragigudda",
+"name": "Ragigudda",
+"lat": 12.91698,
+"lon": 77.58840,
+"lines": ["Yellow"]
+},
+{
+"id": "jayadeva-hospital",
+"name": "Jayadeva Hospital",
+"lat": 12.916744,
+"lon": 77.600117,
+"lines": ["Yellow"]
+},
+{
+"id": "btm-layout",
+"name": "BTM Layout",
+"lat": 12.916560,
+"lon": 77.608250,
+"lines": ["Yellow"]
+},
+{
+"id": "central-silk-board",
+"name": "Central Silk Board",
+"lat": 12.916520,
+"lon": 77.620560,
+"lines": ["Yellow"]
+},
+{
+"id": "bommanahalli",
+"name": "Bommanahalli",
+"lat": 12.910660,
+"lon": 77.626570,
+"lines": ["Yellow"]
+},
+{
+"id": "hongasandra",
+"name": "Hongasandra",
+"lat": 12.901650,
+"lon": 77.632080,
+"lines": ["Yellow"]
+},
+{
+"id": "kudlu-gate",
+"name": "Kudlu Gate",
+"lat": 12.889920,
+"lon": 77.639290,
+"lines": ["Yellow"]
+},
+{
+"id": "singasandra",
+"name": "Singasandra",
+"lat": 12.880690,
+"lon": 77.644980,
+"lines": ["Yellow"]
+},
+{
+"id": "hosa-road",
+"name": "Hosa Road",
+"lat": 12.870780,
+"lon": 77.652480,
+"lines": ["Yellow"]
+},
+{
+"id": "beratena-agrahara",
+"name": "Beratena Agrahara",
+"lat": 12.863850,
+"lon": 77.657980,
+"lines": ["Yellow"]
+},
+{
+"id": "electronic-city",
+"name": "Electronic City",
+"lat": 12.846490,
+"lon": 77.671120,
+"lines": ["Yellow"]
+},
+{
+"id": "infosys-foundation-konappana-agrahara",
+"name": "Infosys Foundation Konappana Agrahara",
+"lat": 12.856480,
+"lon": 77.663610,
+"lines": ["Yellow"]
+},
+{
+"id": "huskur-road",
+"name": "Huskur Road",
+"lat": 12.839010,
+"lon": 77.677540,
+"lines": ["Yellow"]
+},
+{
+"id": "biocon-hebbagodi",
+"name": "Biocon Hebbagodi",
+"lat": 12.829090,
+"lon": 77.681330,
+"lines": ["Yellow"]
+},
+{
+"id": "delta-electronics-bommasandra",
+"name": "Delta Electronics Bommasandra",
+"lat": 12.819330,
+"lon": 77.688340,
+"lines": ["Yellow"]
+}]
