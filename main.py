@@ -10,28 +10,6 @@ LINE_SEQ_FILE = "line_sequences.json"
 AVG_SPEED_KMH = 35.0
 DWELL_SEC = 30
 
-
-def load_line_sequences(filename):
-    try:
-        with open(filename, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception as e:
-        quit
-        print(Fore.RED + f"Error loading line sequences: {e}")
-        return {}
-
-
-def haversine_km(lat1, lon1, lat2, lon2):
-    """Return great-circle distance between two lat/lon points in km."""
-    R = 6371.0
-    phi1, phi2 = math.radians(lat1), math.radians(lat2)
-    dphi = math.radians(lat2 - lat1)
-    dl = math.radians(lon2 - lon1)
-    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dl / 2) ** 2
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-    return R * c
-
-
 def load_stations_from_file(filename):
     """Load station metadata from JSON and group them by line."""
     try:
@@ -58,12 +36,15 @@ def load_stations_from_file(filename):
 
     return stations, line_groups
 
-
-def fmt_time(dt):
-    """Format datetime as HH:MM."""
-    return dt.strftime("%H:%M")
-
-
+def load_line_sequences(filename):
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        quit
+        print(Fore.RED + f"Error loading line sequences: {e}")
+        return {}
+    
 def build_graph(stations, line_groups, line_sequences):
     """
     Build a graph where edges connect consecutive stations on each line.
@@ -98,29 +79,33 @@ def build_graph(stations, line_groups, line_sequences):
 
     return adj
 
+def list_stations_menu(stations, line_groups):
+    """Interactive menu to browse stations line-wise."""
+    print(f"\n{Fore.CYAN}{Style.BRIGHT}🗺  Browse Stations by Line")
+    lines = sorted(line_groups.keys())
+    for i, line in enumerate(lines, 1):
+        print(f"  {i}. {line}")
+    print("  0. Back to main menu")
 
-def dijkstra(adj, start_id, goal_id):
-    """Compute shortest-time path between two stations using Dijkstra's algorithm."""
-    pq = [(0, start_id, [])]
-    visited = set()
-    min_times = {start_id: 0}
+    choice = input("\nSelect a line number: ").strip()
+    if not choice.isdigit():
+        return
+    idx = int(choice)
+    if idx == 0 or not (1 <= idx <= len(lines)):
+        return
 
-    while pq:
-        cost, cur, path = heapq.heappop(pq)
-        if cur in visited:
-            continue
-        visited.add(cur)
-        path = path + [cur]
-        if cur == goal_id:
-            return path, cost
+    line = lines[idx - 1]
+    if idx == 1:
+        print(f"\n{Fore.GREEN}{Style.BRIGHT}Stations on {line} Line:\n")
+    elif idx == 2:
+        print(f"\n{Fore.MAGENTA}{Style.BRIGHT}Stations on {line} Line:\n")
+    elif idx == 3:
+        print(f"\n{Fore.YELLOW}{Style.BRIGHT}Stations on {line} Line:\n")
 
-        for neighbor, edge_cost, _ in adj[cur]:
-            new_cost = cost + edge_cost
-            if new_cost < min_times.get(neighbor, float("inf")):
-                min_times[neighbor] = new_cost
-                heapq.heappush(pq, (new_cost, neighbor, path))
-    return None, 0
-
+    for sid in line_groups[line]:
+        s = stations[sid]
+        print(f"  • {s['display_name']}")
+    print()
 
 def get_user_selection(stations, prompt_text):
     """Interactive fuzzy search to select a station from user input."""
@@ -141,7 +126,7 @@ def get_user_selection(stations, prompt_text):
         if not matches:
             guesses = difflib.get_close_matches(query, all_names, n=3, cutoff=0.5)
             if guesses:
-                print(f"{Fore.YELLOW}No exact match. Did you mean...?")
+                print(f"{Fore.YELLOW}No exact match found. Did you mean...?")
                 matches = [stations[name_to_id[g]] for g in guesses]
             else:
                 print(f"{Fore.RED}No matches found. Check spelling.")
@@ -162,30 +147,38 @@ def get_user_selection(stations, prompt_text):
             if 0 <= idx < len(matches):
                 return matches[idx]["id"]
 
+def dijkstra(adj, start_id, goal_id):
+    """Compute shortest-time path between two stations using Dijkstra's algorithm."""
+    pq = [(0, start_id, [])]
 
-def list_stations_menu(stations, line_groups):
-    """Interactive menu to browse stations line-wise."""
-    print(f"\n{Fore.CYAN}{Style.BRIGHT}🗺  Browse Stations by Line")
-    lines = sorted(line_groups.keys())
-    for i, line in enumerate(lines, 1):
-        print(f"  {i}. {line}")
-    print("  0. Back to main menu")
+    visited = set()
+    min_times = {start_id: 0}
 
-    choice = input("\nSelect a line number: ").strip()
-    if not choice.isdigit():
-        return
-    idx = int(choice)
-    if idx == 0 or not (1 <= idx <= len(lines)):
-        return
+    while pq:
+        cost, cur, path = heapq.heappop(pq)
+        if cur in visited:
+            continue
+        visited.add(cur)
+        path = path + [cur]
+        if cur == goal_id:
+            return path, cost
 
-    line = lines[idx - 1]
-    print(f"\n{Fore.MAGENTA}{Style.BRIGHT}Stations on {line} Line:\n")
-
-    for sid in line_groups[line]:
-        s = stations[sid]
-        print(f"  • {s['display_name']}")
-    print()
-
+        for neighbor, edge_cost, _ in adj[cur]:
+            new_cost = cost + edge_cost
+            if new_cost < min_times.get(neighbor, float("inf")):
+                min_times[neighbor] = new_cost
+                heapq.heappush(pq, (new_cost, neighbor, path))
+    return None, 0
+            
+def haversine_km(lat1, lon1, lat2, lon2):
+    """Return great-circle distance between two lat/lon points in km."""
+    R = 6371.0
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dl = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dl / 2) ** 2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    return R * c
 
 def compute_interchanges(path, stations):
     """Count intermediate stations that belong to multiple lines."""
@@ -196,6 +189,10 @@ def compute_interchanges(path, stations):
         if len(stations[sid]["lines"]) > 1:
             interchanges += 1
     return interchanges
+
+def fmt_time(dt):
+    """Format datetime as HH:MM."""
+    return dt.strftime("%H:%M")
 
 
 def main():
@@ -234,14 +231,14 @@ def main():
             start_id = last_origin
             goal_id = last_destination
         elif choice == "1":
-            print("\n" + "-" * 30)
+            print("\n" + "-" * 56)
             print(
                 f"{Fore.YELLOW}Tip: Type part of the station name, I'll fuzzy match it."
             )
-            start_id = get_user_selection(stations, "Origin Station")
+            start_id = get_user_selection(stations, "Origin Station:")
             if not start_id:
                 continue
-            goal_id = get_user_selection(stations, "Destination Station")
+            goal_id = get_user_selection(stations, "Destination Station:")
             if not goal_id:
                 continue
             last_origin = start_id
@@ -291,21 +288,6 @@ def main():
         print(
             f"  (Timing is an estimate based only on distance & speed)"
         )
-
-        again = input(
-            f"\n{Fore.CYAN}Options: [R]everse route, [N]ew route, [M]ain menu: "
-        ).strip().lower()
-
-        if again == "r":
-            last_origin, last_destination = last_destination, last_origin
-            start_id, goal_id = last_origin, last_destination
-            choice = "3"
-            continue
-        elif again == "n":
-            continue
-        else:
-            continue
-
 
 if __name__ == "__main__":
     main()
